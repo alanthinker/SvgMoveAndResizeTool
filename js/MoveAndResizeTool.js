@@ -173,43 +173,63 @@ MoveAndResizeElementWrapper.prototype.initializeEventHandlers = function () {
     var wrapper = this;
 
     $(this.moveActionTriggerQueryStr).mousedown(function (event) {
+        console.log('moveActionTriggerQueryStr');
+        event.preventDefault();
         wrapper.currentAction = wrapper.ActionsEnum.Move;
     });
 
     $(this.topActionTriggerQueryStr).mousedown(function (event) {
+        console.log('topActionTriggerQueryStr');
+        event.preventDefault();
         wrapper.currentAction = wrapper.ActionsEnum.TopResize;
     });
 
     $(this.bottomActionTriggerQueryStr).mousedown(function (event) {
+        console.log('bottomActionTriggerQueryStr');
+        event.preventDefault();
         wrapper.currentAction = wrapper.ActionsEnum.BottomResize;
     });
 
     $(this.leftActionTriggerQueryStr).mousedown(function (event) {
+        console.log('leftActionTriggerQueryStr');
+        event.preventDefault();
         wrapper.currentAction = wrapper.ActionsEnum.LeftResize;
     });
 
     $(this.rightActionTriggerQueryStr).mousedown(function (event) {
+        console.log('rightActionTriggerQueryStr');
+        event.preventDefault();
         wrapper.currentAction = wrapper.ActionsEnum.RightResize;
     });
 
     $(this.topLeftActionTriggerQueryStr).mousedown(function (event) {
+        console.log('topLeftActionTriggerQueryStr');
+        event.preventDefault();
         wrapper.currentAction = wrapper.ActionsEnum.TopLeftResize;
     });
 
     $(this.topRightActionTriggerQueryStr).mousedown(function (event) {
+        console.log('topRightActionTriggerQueryStr');
+        event.preventDefault();
         wrapper.currentAction = wrapper.ActionsEnum.TopRightResize;
     });
 
     $(this.bottomLeftActionTriggerQueryStr).mousedown(function (event) {
+        console.log('bottomLeftActionTriggerQueryStr');
+        event.preventDefault();
         wrapper.currentAction = wrapper.ActionsEnum.BottomLeftResize;
     });
 
     $(this.bottomRightActionTriggerQueryStr).mousedown(function (event) {
+        console.log('bottomRightActionTriggerQueryStr');
+        event.preventDefault();
         wrapper.currentAction = wrapper.ActionsEnum.BottomRightResize;
     });
 
     $(document).mouseup(function (event) {
         // Clear the current action.
+        
+        console.log('mouseup', event.target);
         wrapper.currentAction = wrapper.ActionsEnum.None;
     });
 
